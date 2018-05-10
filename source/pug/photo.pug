@@ -1,0 +1,29 @@
+extends templates/main-template
+
+block variables
+  -
+    pageTitle = 'Главная'
+    pageName = 'photo';
+
+block vars
+  - headerMainLogo = 'header-main__logo--small-height'
+
+block main
+  picture
+    source(media='(min-width: 1200px)' type='image/webp'
+      srcset='img/....webp 1x, img/....webp 2x')
+    source(media='(min-width: 1200px)'
+      srcset='img/....jpg 1x, img/....jpg 2x')
+    source(media='(min-width: 768px)' type='image/webp'
+      srcset='img/....webp 1x')
+    source(media='(min-width: 768px)'
+      srcset='img/....jpg 1x, img/....jpg 2x')
+    source(media='(min-width: 320px)' type='image/webp'
+      srcset='img/....webp 1x, img/....jpg 2x')
+    img(src='img/photo2.jpg' alt='Фото работы')
+
+  ul
+    li
+      svg(width='22' height='20' aria-label='Иконка')
+        use(xlink:href='#...')
+      span.card__description борода
